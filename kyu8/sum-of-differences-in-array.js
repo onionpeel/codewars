@@ -43,17 +43,20 @@
 // // const des = arr.sort((a,b) => b - a);
 // console.log(arr.sort((a,b) => b - a));
 
-// var Arr = [3,7,5,1,0,4,8,6,3]
-//
-// for (var i = 1; i < Arr.length; i++)
-//     for (var j = 0; j < i; j++)
-//         if (Arr[i] < Arr[j]) {
-//           var x = Arr[i];
-//           Arr[i] = Arr[j];
-//           Arr[j] = x;
-//         }
-//
-// console.log(Arr);
+// var Arr = [3,8,5,1,0,4,7,6,3]
+// var Arr = [3,8,5,1,0,4,7,6,3]
+
+let Arr = [1,2,3,5];
+
+for (var i = 1; i < Arr.length; i++)
+    for (var j = 0; j < i; j++)
+        if (Arr[i] < Arr[j]) {
+          var x = Arr[i];
+          Arr[i] = Arr[j];
+          Arr[j] = x;
+        }
+
+console.log(Arr);
 
 // let mult = 1;
 // let arr = [5,5,5];
