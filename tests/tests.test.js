@@ -2,6 +2,7 @@ const findDifference = require('../kyu8/difference-of-volumes-of-cuboids');
 const greet = require('../kyu8/function-1-hello-world.js');
 const isPalindrome = require('../kyu8/is-it-a-palindrome.js');
 const getAverage = require('../kyu8/get-the-mean-of-an-array.js');
+const findSmallestInt = require('../kyu8/find-the-smallest-integer.js');
 
 describe('kyu8/difference-of-volumes-of-cuboids', () => {
   test('difference between volumes to be 19', () => {
@@ -38,5 +39,14 @@ describe('kyu8\get-the-mean-of-an-array.js', () => {
   });
   test('the average should not be a floating point', () => {
     expect(getAverage([1,2])).not.toBe(1.5);
+  });
+});
+
+describe('kyu8\find-the-smallest-integer.js', () => {
+  test('the smallest integer should be -3', () => {
+    expect(findSmallestInt([-2, 5, 0, -3])).toBe(-3);
+  });
+  test('the smallest integer should not be -3', () => {
+    expect(findSmallestInt([-2, 5, 0, -3, -4])).not.toBe(-3);
   });
 });
