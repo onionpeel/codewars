@@ -5,6 +5,8 @@ const getAverage = require('../kyu8/get-the-mean-of-an-array.js');
 const findSmallestInt = require('../kyu8/find-the-smallest-integer.js');
 const reduce = require('../kyu8/reduce-but-grow.js');
 const between = require('../kyu8/what-is-between.js');
+const isDivisible = require('../kyu8/is-n-divisible-by-x-and-y.js');
+const dnaToRna = require('../kyu8/DNA-to-RNA-conversion.js');
 
 describe('kyu8/difference-of-volumes-of-cuboids', () => {
   test('difference between volumes to be 19', () => {
@@ -68,5 +70,20 @@ describe('kyu8\reduce-but-grow.js', () => {
   });
   test('it should not include all numbers between 1 and 6', () => {
     expect(between(1,4)).not.toEqual([1,2,3,4,5,6]);
+  });
+});
+
+describe('kyu8\is-n-divisible-by-x-and-y.js', () => {
+  test('the number 6 should return true for 2 and 3', () => {
+    expect(isDivisible(6,2,3)).toBe(true);
+  });
+  test('the number 5 should return false for 2 and 3', () => {
+    expect(isDivisible(5,2,3)).not.toBe(true);
+  });
+});
+
+describe('kyu8\DNA-to-RNA-conversion.js', () => {
+  test('T should be replaced by U', () => {
+    expect(dnaToRna('GCAT')).toBe('GCAU');
   });
 });
