@@ -7,6 +7,7 @@ const reduce = require('../kyu8/reduce-but-grow.js');
 const between = require('../kyu8/what-is-between.js');
 const isDivisible = require('../kyu8/is-n-divisible-by-x-and-y.js');
 const dnaToRna = require('../kyu8/DNA-to-RNA-conversion.js');
+const getGrade = require('../kyu8/grade-book.js');
 
 describe('kyu8/difference-of-volumes-of-cuboids', () => {
   test('difference between volumes to be 19', () => {
@@ -85,5 +86,14 @@ describe('kyu8\is-n-divisible-by-x-and-y.js', () => {
 describe('kyu8\DNA-to-RNA-conversion.js', () => {
   test('T should be replaced by U', () => {
     expect(dnaToRna('GCAT')).toBe('GCAU');
+  });
+});
+
+describe('kyu8\grade-book.js', () => {
+  test('it should return an "A"', () => {
+    expect(getGrade(100, 92, 95)).toBe('A');
+  });
+  test('it should not be an "A"', () => {
+    expect(getGrade(85,85,85)).not.toBe('A');
   });
 });

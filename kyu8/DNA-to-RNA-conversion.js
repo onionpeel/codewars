@@ -17,6 +17,6 @@
 //   return [...dna].map(char => char !== 'T' ? char : 'U').join('');
 // };
 
-const dnaArray = dna => dna.split('T').join('U');
+const dnaToRna = dna => dna.split('T').join('U');
 
 module.exports = dnaToRna;
