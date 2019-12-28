@@ -8,6 +8,7 @@ const between = require('../kyu8/what-is-between.js');
 const isDivisible = require('../kyu8/is-n-divisible-by-x-and-y.js');
 const dnaToRna = require('../kyu8/DNA-to-RNA-conversion.js');
 const getGrade = require('../kyu8/grade-book.js');
+const fakeBin = require('../kyu8/fake-binary.js');
 
 describe('kyu8/difference-of-volumes-of-cuboids', () => {
   test('difference between volumes to be 19', () => {
@@ -95,5 +96,14 @@ describe('kyu8\grade-book.js', () => {
   });
   test('it should not be an "A"', () => {
     expect(getGrade(85,85,85)).not.toBe('A');
+  });
+});
+
+describe('kyu8\fake-binary.js', () => {
+  test('it should return the string "000111"', () => {
+    expect(fakeBin('123789')).toBe('000111');
+  });
+  test('it should not return the string "0011"', () => {
+    expect(fakeBin('5522')).not.toBe('0011');
   });
 });
