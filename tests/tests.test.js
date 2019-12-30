@@ -10,6 +10,7 @@ const dnaToRna = require('../kyu8/DNA-to-RNA-conversion.js');
 const getGrade = require('../kyu8/grade-book.js');
 const fakeBin = require('../kyu8/fake-binary.js');
 const isVow = require('../kyu8/is-there-a-vowel-in-there.js');
+const stairsIn20 = require('../kyu8/how-many-stairs.js');
 
 describe('kyu8/difference-of-volumes-of-cuboids', () => {
   test('difference between volumes to be 19', () => {
@@ -115,5 +116,14 @@ describe('kyu8\is-there-a-vowel-in-there.js', () => {
   });
   test('it should not return ["e", 121, 110]', () => {
     expect(isVow([101,121,110])).not.toEqual(["a", 121, 110]);
+  });
+});
+
+describe('kyu8\how-many-stairs.js', () => {
+  test('it should equal 7', () => {
+    expect(stairsIn20([[1],[1],[1],[1],[1],[1],[1]])).toBe(140);
+  });
+  test('it should not equal 7', () => {
+    expect(stairsIn20([[2],[1],[1],[1],[1],[1],[1]])).not.toBe(140);
   });
 });
