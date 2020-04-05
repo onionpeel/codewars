@@ -12,6 +12,7 @@ const fakeBin = require('../kyu8/fake-binary.js');
 const isVow = require('../kyu8/is-there-a-vowel-in-there.js');
 const stairsIn20 = require('../kyu8/how-many-stairs.js');
 const numberToString = require('../kyu8/convert-a-number-to-a-string.js');
+const arrayMadness = require('../kyu8/array-madness.js');
 
 describe('kyu8/difference-of-volumes-of-cuboids', () => {
   test('difference between volumes to be 19', () => {
@@ -135,5 +136,11 @@ describe('kyu8\convert-a-number-to-a-string.js', () => {
   });
   test('The return value should not be "123"', () => {
     expect(numberToString(234)).toEqual(expect.not.stringContaining('123'));
+  });
+
+  describe('kyu8\array-madness.js', () => {
+    test('The return value should be "true"', () => {
+      expect(arrayMadness([4,5,6], [1,2,3])).toBe(true);
+    });
   });
 });
