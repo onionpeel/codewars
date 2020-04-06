@@ -13,6 +13,7 @@ const isVow = require('../kyu8/is-there-a-vowel-in-there.js');
 const stairsIn20 = require('../kyu8/how-many-stairs.js');
 const numberToString = require('../kyu8/convert-a-number-to-a-string.js');
 const arrayMadness = require('../kyu8/array-madness.js');
+const isUpperCase = require('../kyu8/isUpperCase.js');
 
 describe('kyu8/difference-of-volumes-of-cuboids', () => {
   test('difference between volumes to be 19', () => {
@@ -141,6 +142,15 @@ describe('kyu8\convert-a-number-to-a-string.js', () => {
   describe('kyu8\array-madness.js', () => {
     test('The return value should be "true"', () => {
       expect(arrayMadness([4,5,6], [1,2,3])).toBe(true);
+    });
+  });
+
+  describe('kyu8\isUpperCase.js', () => {
+    test('The string "TofuBrain" should return false', () => {
+      expect(isUpperCase('TofuBrain')).toBe(false);
+    });
+    test('The string "TOFUBRAIN" should return true', () => {
+      expect(isUpperCase('TOFUBRAIN')).toBe(true);
     });
   });
 });
