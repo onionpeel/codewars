@@ -4,3 +4,9 @@ const isUpperCase = str => {
 };
 
 module.exports = isUpperCase;
+
+
+// String.prototype.isUpperCase = function() {
+//   const convertedStr = this.toUpperCase();
+//   return this.toString() === convertedStr;
+// };

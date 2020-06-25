@@ -14,6 +14,16 @@ const stairsIn20 = require('../kyu8/how-many-stairs.js');
 const numberToString = require('../kyu8/convert-a-number-to-a-string.js');
 const arrayMadness = require('../kyu8/array-madness.js');
 const isUpperCase = require('../kyu8/isUpperCase.js');
+const quarterOf = require('../kyu8/quarter-of-the-year');
+
+describe('kyu8/quarter-of-the-year.js', () => {
+  test('6 should return 2', () => {
+    expect(quarterOf(6)).toBe(2);
+  });
+  test('7 should not return 4', () => {
+    expect(quarterOf(7)).not.toBe(4);
+  });
+});
 
 describe('kyu8/difference-of-volumes-of-cuboids', () => {
   test('difference between volumes to be 19', () => {
