@@ -15,6 +15,16 @@ const numberToString = require('../kyu8/convert-a-number-to-a-string.js');
 const arrayMadness = require('../kyu8/array-madness.js');
 const isUpperCase = require('../kyu8/isUpperCase.js');
 const quarterOf = require('../kyu8/quarter-of-the-year');
+const dutyFree = require('../kyu8/holiday-viii');
+
+describe('kyu8/holiday-viii', () => {
+  test('20 bottles at 50% discount will reach a 200 holiday price in 20 days', () => {
+    expect(dutyFree(20, 50, 200)).toBe(20);
+  });
+  test('20 bottles at 50% discount will reach a 100 holiday price in 20 days', () => {
+    expect(dutyFree(20, 50, 1000)).not.toBe(20);
+  });
+});
 
 describe('kyu8/quarter-of-the-year.js', () => {
   test('6 should return 2', () => {
