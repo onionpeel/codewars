@@ -16,6 +16,16 @@ const arrayMadness = require('../kyu8/array-madness.js');
 const isUpperCase = require('../kyu8/isUpperCase.js');
 const quarterOf = require('../kyu8/quarter-of-the-year');
 const dutyFree = require('../kyu8/holiday-viii');
+const derive = require('../kyu8/take-the-derivative');
+
+describe('kyu8\take-the-derivative.js', () => {
+  test('5,7 should return 35x^6', () => {
+    expect(derive(5,7)).toBe('35x^6');
+  });
+  test('4,7 should not return 35x^6', () => {
+    expect(derive(4,7)).not.toBe('35x^6');
+  });
+});
 
 describe('kyu8/holiday-viii', () => {
   test('20 bottles at 50% discount will reach a 200 holiday price in 20 days', () => {
